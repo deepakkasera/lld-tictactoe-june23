@@ -48,4 +48,27 @@ public class Game {
     public void setNextPlayerIndex(int nextPlayerIndex) {
         this.nextPlayerIndex = nextPlayerIndex;
     }
+
+    public static class Builder {
+        private int dimension;
+        private List<Player> players;
+
+        public int getDimension() {
+            return dimension;
+        }
+
+        public Builder setDimension(int dimension) {
+            this.dimension = dimension;
+            return this;
+        }
+
+        public List<Player> getPlayers() {
+            return players;
+        }
+
+        public Builder setPlayers(List<Player> players) {
+            this.players = players;
+            return this;
+        }
+    }
 }
