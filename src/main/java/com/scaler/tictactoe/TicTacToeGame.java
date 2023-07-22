@@ -4,7 +4,6 @@ import com.scaler.tictactoe.models.*;
 import controllers.GameController;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,8 +28,9 @@ public class TicTacToeGame {
             System.out.println("What is the symbol of the bot: ");
             String symbol = scanner.next();
 
-            //Get the difficulty level.
+            //String difficultyLevel = scanner.next();
 
+            //Get the difficulty level.
             players.add(new Bot(name, symbol.charAt(0), BotDifficultyLevel.EASY));
         }
 
@@ -72,5 +72,14 @@ public class TicTacToeGame {
         if (game.getGameStatus().equals(GameStatus.ENDED)) {
             System.out.println("Winner is " + gameController.getWinner(game).getName());
         }
+
     }
 }
+
+//UNDO Steps :- [Assignment]
+/*
+1. Remove the last move for the list of moves.
+2. Update the board as well.
+3. Update the hashmaps.
+4. Update the currentPlayer index as well.
+ */
