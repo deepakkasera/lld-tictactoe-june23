@@ -31,7 +31,8 @@ public class GameController {
     }
 
     public void executeNextMove(Game game) {
-        //
+        //implementation.
+        game.makeNextMove();
     }
 
     public GameStatus getGameStatus(Game game) {
